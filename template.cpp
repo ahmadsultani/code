@@ -1,7 +1,4 @@
 #include <bits/stdc++.h>
-#define MOD 10e9+7
-typedef long double ld;
-typedef long long ll;
 using namespace std;
 
 int main() {
