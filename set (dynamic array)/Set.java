@@ -53,9 +53,6 @@ public class Set {
         set.add("Ahmad");
         set.add("Sultani");
         set.add("Dayanullah");
-        set.add("Faysa");
-        set.add("Ryestitha");
-        set.add("Etsuko");
         set.print();
     }
 }
