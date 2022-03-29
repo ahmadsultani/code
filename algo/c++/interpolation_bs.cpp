@@ -1,7 +1,7 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int binarySearch(int* arr, int target, int len){
+int interpolation_bs(int* arr, int target, int len){
     int left = 0, right = len - 1;
     while(left <= right) {
         int mid = (left + right) / 2;
@@ -17,6 +17,6 @@ int main() {
     int arr[] = {1, 2, 3, 5, 7, 8, 9, 10, 18, 19, 21, 20};
     int target = 9;
     cout << "target found at index ";
-    cout << binarySearch(arr, target, sizeof(arr)/sizeof(int));
+    cout << interpolation_bs(arr, target, sizeof(arr)/sizeof(int));
     return 0;
 }
