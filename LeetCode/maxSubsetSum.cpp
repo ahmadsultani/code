@@ -23,7 +23,7 @@ int maxSubArray(int arr[], int n) {
 
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
-    int arr[] = {1, 2, 3, 5, 0, 9, 3, 5, -1, 9};
+    int arr[] = {1, 2, 3, 5, 0, 9, 3, 5, 9};
     cout << "Result with dp: " << maxSubsetSum(arr, sizeof(arr)/sizeof(arr[0])) << endl;
     cout << "Result with kadane's: " << maxSubArray(arr, sizeof(arr)/sizeof(arr[0])) << endl;
     return 0;
