@@ -1,5 +1,23 @@
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std; 
+
+int presicion(float);
+
+float binarySquareRoot(float, float);
+
+int main() {
+    float num = 2;
+
+    //step used to determine how precise the answer is
+    float step = 0.1;
+
+    //using binary search to find the square root
+    binarySquareRoot(num, step);
+
+    int floatingPoints = precision(step);
+    cout << setprecision(floatingPoints) << right;
+    return 0;
+}
 
 int precision(float number) {
     int res = 0;
@@ -10,23 +28,12 @@ int precision(float number) {
     return res;
 }
 
-int main() {
-    float num = 2;
-
-    //determine how precise the answer is
-    float step = 0.1;
-
-    //using binary search to find the square root
-    float left = 0, right = num-step;
+float binarySquareRoot(float number, float step){
+    float left = 0, right = number-step;
     while (left <= right) {
-        //tips to avoid number out of range
-        float mid = left + (right-left)/2; 
-        if (mid*mid == num) cout << mid;
-        else if (mid*mid < num) left = mid+step;
+        float mid = left + (right-left)/2; //tips to avoid out of range number
+        if (mid*mid == number) cout << mid;
+        else if (mid*mid < number) left = mid+step;
         else right = mid-step;
     }
-
-    int floatingPoints = precision(step);
-    cout << setprecision(floatingPoints) << right;
-    return 0;
 }
