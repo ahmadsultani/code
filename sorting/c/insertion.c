@@ -19,10 +19,14 @@ void swap(int *a, int *b) {
 }
 
 void insertionSort(int* arr, int size){
-    int key = arr[0];
-    for(i = 0; i < size; i++){
-        for(j = 0; j < size - i; j++){
-            if(arr[j] > arr[j + 1]) swap(&arr[j], &arr[j + 1]);
+    int i, j, key;
+    for(i = 1; i < size; i++){
+        key = arr[i];
+        j = i - 1;
+        while(j >= 0 && arr[j] > key){
+            arr[j + 1] = arr[j];
+            j--;
         }
+        arr[j + 1] = key;
     }
 }
