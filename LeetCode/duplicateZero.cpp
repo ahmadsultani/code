@@ -15,9 +15,15 @@ public:
         }
 
         //O(N) time O(1) space
-        int zeros = 0;
+        int zeros = 0, size = arr.size()-1;
         for (int i = 0; i < arr.size(); i++) {
-            if (arr[i] == 0) zeros++;
+            if (arr[i] == 0) {
+                if (i == arr.size() - 1 - zeros) {
+                    arr[arr.size() - 1] = 0;
+                    
+                }
+                zeros++;
+            }
         }
     }
 };
