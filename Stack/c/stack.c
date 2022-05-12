@@ -5,6 +5,7 @@ int isFull();
 void peek();
 void push(int);
 void pop();
+void print();
 
 int maks = 3;
 int top = -1;
@@ -49,5 +50,11 @@ void pop () {
         printf("Stack kosong\n");
     } else {
         printf("Data yang dihapus adalah %d\n", stack[top--]);
+    }
+}
+
+void print() {
+    for (int i = 0; i <= top; i++) {
+        printf("%d ", stack[i]);
     }
 }
