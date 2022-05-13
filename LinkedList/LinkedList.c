@@ -34,10 +34,10 @@ void addAtTail(int data) {
         curr = malloc(sizeof(Node));
         curr->data = data;
         curr->next = NULL;
-        return
+        return;
     }
     Node* temp = malloc(sizeof(Node));
-    temp->data = val;
+    temp->data = data;
     temp->next = NULL;
 }
 
