@@ -11,7 +11,7 @@ int main() {
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
-        }
+        }   
     }
     for (int i : arr) cout << i << " ";
     return 0;
