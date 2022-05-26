@@ -31,7 +31,7 @@ public class LinkedQueue implements Queue {
         if (isEmpty()) {
             throw new QueueEmptyException("Queue is empty");
         }
-        return first.obj;
+        return first.data;
     }
 
     public void enqueue(Object obj) throws QueueFullException {
@@ -52,7 +52,7 @@ public class LinkedQueue implements Queue {
         if (isEmpty()) {
             throw new QueueEmptyException("Queue is empty");
         }
-        Object obj = first.obj;
+        Object obj = first.data;
         first = first.next;
         count--;
         return obj;
@@ -65,7 +65,7 @@ public class LinkedQueue implements Queue {
         }
         Node temp = first;
         while (temp != null) {
-            System.out.print(temp.obj + " ");
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
     }
