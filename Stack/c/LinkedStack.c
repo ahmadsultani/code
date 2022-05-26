@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct Node Node;
+
 struct Node {
     int data;
-    struct Node *next;
+    Node *next;
 };
-
-typedef struct Node Node;
 
 int isEmpty();
 int isFull();
