@@ -31,10 +31,19 @@ public class ArrayStack implements Stack {
         return Data[top];
     }
 
-    public void push(Object obj) throws StackfullException {
+    public void push(Object obj) throws StackFullException {
         if (isFull()) {
             throw new StackFullException("Stack is full");
         }
         Data[++top] = obj;
+    }
+
+    public Object pop() throws StackEmptyException {
+        if (isEmpty()) {
+            throw new StackEmptyException("Stack is empty");
+        }
+        Object obj = Data[top];
+        Data[top--] = null;
+        return obj;
     }
 }

@@ -1,19 +1,19 @@
 public class Node {
-    public Object obj;
+    public Object data;
     public Node next;
 
     public Node() {
-        obj = null;
+        data = null;
         next = null;
     }
 
-    public Node(Object obj) {
-        this.obj = obj;
+    public Node(Object data) {
+        this.data = data;
         next = null;
     }
 
-    public Node(Object obj, Node next) {
-        this.obj = obj;
+    public Node(Object data, Node next) {
+        this.data = data;
         this.next = next;
     }
 }
