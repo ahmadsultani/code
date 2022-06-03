@@ -79,7 +79,7 @@ void addAtindex(int data, int index) {
             temp = temp->next;
             tempIndex++;
         }
-        printf("Index out of range");
+        printf("Index out of range\n");
     }
 }
 
@@ -98,6 +98,6 @@ void deleteAtIndex(int index) {
             tempIndex++;
         }
         if (temp->next != NULL) temp->next = temp->next->next;
-        else printf("Index out of range!\n", index);
+        else printf("Index out of range!\n");
     }
 }
