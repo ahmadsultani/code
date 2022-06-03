@@ -53,9 +53,14 @@ void addAtTail(int data) {
         head->next = NULL;
         return;
     }
-    Node* temp = malloc(sizeof(Node));
-    temp->data = data;
-    temp->next = NULL;
+    Node* temp = head;
+    while(temp->next != NULL) {
+        temp = temp->next;
+    }
+    Node* newNode = malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    temp->next = newNode;
 }
 
 void addAtindex(int data, int index) {
