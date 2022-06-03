@@ -6,20 +6,23 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
-void print(Node*);
-void addAtHead(Node*, int);
-void addAtTail(Node*, int);
-void addAtIndex(Node*, int, int);
-void deleteAtIndex(Node*, int);
-void search(Node*, int);
+void print();
+void addAtHead(int);
+void addAtTail(int);
+void addAtIndex(int, int);
+void deleteAtIndex(int);
+void search(int);
+
+Node* head = NULL;
 
 int main() {
-    Node* test1 = NULL;
-    Node* test2 = NULL;
+    addAtHead(12);
+    addAtHead(11);
+    print();
     return 0;
 }
 
-void print(Node* head) {
+void print() {
     if (head == NULL) printf("List is empty\n");
     else {
         Node* temp = head;
@@ -31,7 +34,7 @@ void print(Node* head) {
     }
 }
 
-void addAtHead(Node* head, int data) {
+void addAtHead(int data) {
     Node* temp = malloc(sizeof(Node));
     temp->data = data;
     if (head == NULL) {
@@ -43,7 +46,7 @@ void addAtHead(Node* head, int data) {
     head = temp;
 }
 
-void addAtTail(Node* head, int data) {
+void addAtTail(int data) {
     if (head == NULL) {
         head = malloc(sizeof(Node));
         head->data = data;
@@ -55,8 +58,8 @@ void addAtTail(Node* head, int data) {
     temp->next = NULL;
 }
 
-void addAtindex(Node* head, int data, int index) {
-    if (index == 0) addAtHead(head, data);
+void addAtindex(int data, int index) {
+    if (index == 0) addAtHead(data);
     else {
         Node* temp = head;
         int tempIndex = 0;
@@ -75,7 +78,7 @@ void addAtindex(Node* head, int data, int index) {
     }
 }
 
-void deleteAtIndex(Node* head, int index) {
+void deleteAtIndex(int index) {
     if (head == NULL) {
         printf("List is empty\n");
         return;
