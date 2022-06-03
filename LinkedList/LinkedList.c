@@ -20,10 +20,14 @@ int main() {
 }
 
 void print(Node* head) {
-    Node* temp = head;
-    while (temp != NULL) {
-        printf("%d\n", temp->data);
-        temp = temp->next;
+    if (head == NULL) printf("List is empty\n");
+    else {
+        Node* temp = head;
+        while (temp != NULL) {
+            printf("%d ", temp->data);
+            temp = temp->next;
+        }
+        printf("\n");
     }
 }
 
@@ -57,21 +61,23 @@ void addAtindex(Node* head, int data, int index) {
         Node* temp = head;
         int tempIndex = 0;
         while(temp->next != NULL) {
-            if (tempIndex = index - 1) {
+            if (tempIndex == index - 1) {
                 Node* newNode = malloc(sizeof(Node));
                 newNode->data = data;
                 newNode->next = temp->next;
                 temp->next = newNode;
+                return;
             }
             temp = temp->next;
             tempIndex++;
         }
+        printf("Index out of range");
     }
 }
 
 void deleteAtIndex(Node* head, int index) {
     if (head == NULL) {
-        printf("List kosong\n");
+        printf("List is empty\n");
         return;
     } else if (index == 0) {
         head = head->next;
