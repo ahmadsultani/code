@@ -8,7 +8,7 @@ struct Node {
     Node *next;
 };
 
-int size();
+int size(); 
 int isEmpty();
 void peek();
 void enqueue(int data);
