@@ -28,7 +28,7 @@ int isFull() {
     return top == maks-1;
 }
 
-void peek() {
+void peek() {    
     if (isEmpty()) {
         printf("Stack kosong\n");
     } else {
