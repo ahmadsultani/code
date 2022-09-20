@@ -1,7 +1,8 @@
-.vscode/settings.json
 *
 !/**/
 !*.*
 *.elf
 *.exe
 *.class
+*.o
+.vscode
