@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define rep(i, a, b) for (int i = a; i < b; i++)
 #define MOD 10e9+7
 #define pb push_back
 #define vi vector<int>
